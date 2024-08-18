@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">W22</string>
+    <string name="logo_desc">logo\n</string>
+    <string name="english">English\n</string>
+    <string name="francais">Francais</string>
+    <string name="play_desc">desc\n</string>
+    <string name="Abonné">Habitué/Abonné</string>
+    <string name="Nouveau">Nouveau\n</string>
+    <string name="choose_lang">Choose language :</string>
+    <string name="get_started">Get started as :</string>
+    <string name="btn_return">BACK</string>
+    <string name="input_full_name">full name\n</string>
+    <string name="input_email">mail</string>
+    <string name="input_password">password</string>
+
+
+
+
+
+
+
+    <string name="sign_up">Sign up</string>
+    <string name="sign_up_subtitle">Enter your details below to create your account and get started</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="field_of_activity">Field of activity</string>
+    <string name="msg_must_not_be_empty">Must not be empty!</string>
+    <string name="msg_check_your_characters">Must be a at least 6 characters!</string>
+    <string name="msg_check_your_email">Must be a valid email!</string>
+    <string name="msg_error_inputs">You Have some errors in your inputs!</string>
+    <string name="phone_number2">Phone number</string>
+    <string name="sign_up_subtitle2">Enter your phone number below to connect</string>
+    <string name="name_here">Name Here</string>
+    <string name="welcome">Welcome</string>
+    <string name="tes">!</string>
+    <string name="sign_up_subtitle3">Please choose you plan for today  :</string>
+    <string name="basic">Basic</string>
+    <string name="Moderato">Moderato</string>
+    <string name="Premium">Premium</string>
+    <string name="basic1">Basic</string>
+    <string name="to">to</string>
+    <string name="winwin">WINWIN CLUB!</string>
+    <string name="choose_urplace">"Please choose your place "</string>
+    <string name="click_me">click me\n</string>
+
+</resources>

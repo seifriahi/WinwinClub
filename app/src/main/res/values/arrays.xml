@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_array">
+        <item>Pro</item>
+        <item>Basic</item>
+        <item>Guest</item>
+    </string-array>
+    <string-array name="hear_about_us_array">
+        <item>Friends</item>
+        <item>Internet</item>
+        <item>Advertisement</item>
+    </string-array>
+</resources>
