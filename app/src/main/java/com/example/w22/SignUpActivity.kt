@@ -4,11 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import android.view.View
+import android.widget.AdapterView
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.example.w22.databinding.ActivitySignUpBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 const val FULLNAME = "FULLNAME"
 const val EMAIL = "EMAIL"
@@ -18,14 +25,24 @@ const val PREF_FILE = "PREF_FILE"
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
+    private lateinit var spinnerType: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val contextView = findViewById<View>(R.id.context_view1) // Assuming you have this view in your layout
-        val sharedPreferences = getSharedPreferences(PREF_FILE, MODE_PRIVATE)
+        spinnerType = findViewById(R.id.spinnerType)
+        spinnerType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedType = parent?.getItemAtPosition(position).toString()
+                Toast.makeText(this@SignUpActivity, "Selected Type: $selectedType", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(this@SignUpActivity, "No Type Selected", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         binding.etFullName.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -61,18 +78,28 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.btnPlaysignup.setOnClickListener {
             if (validateFullName() && validateEmail() && validateFieldOfActivity() && validatePhoneNumber()) {
-                if (binding.btnPlaysignup.isClickable) {
-                    sharedPreferences.edit().apply {
-                        putString(FULLNAME, binding.etFullName.text.toString())
-                        putString(EMAIL, binding.etEmail.text.toString())
-                        putString(PHONE, binding.etPhoneNumber.text.toString())
-                        putString(FIELDOF, binding.etFieldOfActivity.text.toString())
-                    }.apply()
-                    startActivity(Intent(this, ActivityCong::class.java)) // Replace `NextActivity` with your target activity
+                val fullName = binding.etFullName.text.toString()
+                val email = binding.etEmail.text.toString()
+                val phoneNumber = binding.etPhoneNumber.text.toString()
+                val fieldOfActivity = binding.etFieldOfActivity.text.toString()
+                val type = spinnerType.selectedItem.toString()
 
-                    finish()
-                }
+                val user = User(fullName, email, phoneNumber, fieldOfActivity, type)
+                signUp(user)
+
+                val sharedPreferences = getSharedPreferences(PREF_FILE, MODE_PRIVATE)
+                sharedPreferences.edit().apply {
+                    putString(FULLNAME, fullName)
+                    putString(EMAIL, email)
+                    putString(PHONE, phoneNumber)
+                    putString(FIELDOF, fieldOfActivity)
+                    putString("USER_TYPE", type)
+                }.apply()
+
+                startActivity(Intent(this, ActivityCong::class.java))
+                finish()
             } else {
+                val contextView = findViewById<View>(R.id.context_view1)
                 Snackbar.make(contextView, getString(R.string.msg_error_inputs), Snackbar.LENGTH_SHORT).show()
             }
         }
@@ -126,6 +153,26 @@ class SignUpActivity : AppCompatActivity() {
         } else {
             true
         }
+    }
+
+    private fun signUp(user: User) {
+        val call = ApiClient.apiService.signUp(user)
+
+        call.enqueue(object : Callback<User> {
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                if (response.isSuccessful) {
+                    Toast.makeText(this@SignUpActivity, "Inscription réussie!", Toast.LENGTH_SHORT).show()
+                } else {
+                    Log.e("SignUpActivity", "Erreur : ${response.errorBody()?.string()}")
+                    Toast.makeText(this@SignUpActivity, "Erreur lors de l'inscription", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Log.e("SignUpActivity", "Erreur : ${t.message}")
+                Toast.makeText(this@SignUpActivity, "Échec de la connexion au serveur", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }
 

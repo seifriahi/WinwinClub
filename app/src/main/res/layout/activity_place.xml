@@ -117,19 +117,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.044" />
 
-    <ImageButton
-        android:id="@+id/colorChangingButton4"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
-
     <TextView
         android:id="@+id/itemNUM0"
         android:layout_width="87dp"
@@ -140,10 +127,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672" />
+        app:layout_constraintVertical_bias="0.595" />
 
     <TextView
         android:id="@+id/itemNUM2"
@@ -161,141 +148,6 @@
         app:layout_constraintVertical_bias="0.662" />
 
     <TextView
-        android:id="@+id/itemNUM1"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811" />
-
-    <TextView
-        android:id="@+id/itemNUM4"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
-
-    <TextView
-        android:id="@+id/itemNUM5"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.652" />
-
-    <TextView
-        android:id="@+id/itemNUM6"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
-
-    <TextView
-        android:id="@+id/itemNUM9"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.646"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
-
-    <TextView
-        android:id="@+id/itemNUM8"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.646"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
-
-    <TextView
-        android:id="@+id/itemNUM7"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
-
-    <TextView
-        android:id="@+id/itemNUM10"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
-
-    <TextView
-        android:id="@+id/itemNUM11"
-        android:layout_width="87dp"
-        android:layout_height="27dp"
-        android:text="Num: 0"
-        android:textColor="@color/black"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.762"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
-
-    <TextView
         android:id="@+id/itemNUM3"
         android:layout_width="87dp"
         android:layout_height="27dp"
@@ -308,103 +160,29 @@
         app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.535" /><![CDATA[
+
+    />
+
+
+
+
+    ]]>
 
     <ImageButton
-        android:id="@+id/colorChangingButton11"
+        android:id="@+id/placeNumber20"
         android:layout_width="69dp"
         android:layout_height="63dp"
         android:background="@drawable/button_red"
         android:contentDescription="@string/click_me"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/colorChangingButton9"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754"
-        tools:ignore="DuplicateIds" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton5"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton2"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458"
-        tools:ignore="DuplicateIds" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton3"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.633"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton8"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.638"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton10"
+        android:id="@+id/placeNumber3"
         android:layout_width="69dp"
         android:layout_height="63dp"
         android:background="@drawable/button_red"
@@ -416,8 +194,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.599" />
 
+
+
     <ImageButton
-        android:id="@+id/colorChangingButton1"
+        android:id="@+id/placeNumber2"
         android:layout_width="69dp"
         android:layout_height="63dp"
         android:background="@drawable/button_red"
@@ -429,33 +209,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.458"
         tools:ignore="DuplicateIds" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton7"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <ImageButton
-        android:id="@+id/colorChangingButton6"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
-        android:background="@drawable/button_red"
-        android:contentDescription="@string/click_me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
-
 
 
 

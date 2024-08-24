@@ -1,14 +1,30 @@
 package com.example.w22
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.provider.SimPhonebookContract.SimRecords.PHONE_NUMBER
+import android.util.Log
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.w22.databinding.ActivityPlaceBinding
 import com.example.w22.databinding.ActivityPlanBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class ActivityPlace : AppCompatActivity() {
     private lateinit var binding: ActivityPlaceBinding
 
+    // Retrofit instance
+    private val retrofit = Retrofit.Builder()
+        .baseUrl("http://172.20.10.11:5000/api/") // Replace with your API base URL
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    // API service
+    private val apiService = retrofit.create(ApiService::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,40 +37,44 @@ class ActivityPlace : AppCompatActivity() {
             onBackPressed()
         }
 
-        // Récupération de l'email depuis les préférences partagées
         val mSharedPreferences = getSharedPreferences(PREF_FILE, MODE_PRIVATE)
-
-        // Récupération du nom depuis les préférences partagées
+        val phoneNumber = mSharedPreferences.getString(PHONE_NUMBER, "")
         val name = mSharedPreferences.getString(FULLNAME, "")
         binding.txtFullName2.text = name
 
-        val fullname = mSharedPreferences.getString(FULLNAME, "")
-        binding.txtFullName2.text = fullname
-
         val buttons = listOf(
-            findViewById<ImageButton>(R.id.colorChangingButton),
-            findViewById<ImageButton>(R.id.colorChangingButton1),
-            findViewById<ImageButton>(R.id.colorChangingButton2),
-            findViewById<ImageButton>(R.id.colorChangingButton3),
-            findViewById<ImageButton>(R.id.colorChangingButton4),
-            findViewById<ImageButton>(R.id.colorChangingButton5),
-            findViewById<ImageButton>(R.id.colorChangingButton6),
-            findViewById<ImageButton>(R.id.colorChangingButton7),
-            findViewById<ImageButton>(R.id.colorChangingButton8),
-            findViewById<ImageButton>(R.id.colorChangingButton9),
-            findViewById<ImageButton>(R.id.colorChangingButton10),
-            findViewById<ImageButton>(R.id.colorChangingButton11)
+
+            findViewById<ImageButton>(R.id.placeNumber20),
+            findViewById<ImageButton>(R.id.placeNumber2),
+            // ... other buttons
         )
 
-        buttons.forEach { button ->
-            var isRed = true
+        buttons.forEachIndexed { index, button ->
+            val placeNumber = (index + 1).toString()
             button.setOnClickListener {
-                if (isRed) {
-                    button.setBackgroundResource(R.drawable.button_green)
-                } else {
-                    button.setBackgroundResource(R.drawable.button_red)
+                button.setBackgroundResource(
+                    if (button.background == getDrawable(R.drawable.button_red))
+                        R.drawable.button_green
+                    else
+                        R.drawable.button_red
+                )
+
+                CoroutineScope(Dispatchers.IO).launch {
+                    try {
+                        val placeRequest = PlaceRequest(phoneNumber ?: "", placeNumber)
+                        Log.d("API_REQUEST", "Request body: $placeRequest")
+
+                        val response = apiService.selectPlace(placeRequest)
+                        if (response.isSuccessful) {
+                            Log.d("API_SUCCESS", "Place selected successfully")
+                        } else {
+                            Log.e("API_ERROR", "Error response code: ${response.code()}")
+                            Log.e("API_ERROR", "Response body: ${response.errorBody()?.string()}")
+                        }
+                    } catch (e: Exception) {
+                        Log.e("API_EXCEPTION", "Exception: ${e.message}")
+                    }
                 }
-                isRed = !isRed
             }
         }
     }
