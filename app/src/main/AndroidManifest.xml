@@ -43,7 +43,7 @@
             android:name=".SignInActivity"
             android:exported="true" />
         <activity
-            android:name=".ActivityPlan"
+            android:name=".PlanActivity"
             android:exported="true" />
         <activity
             android:name=".ActivityPlace"

@@ -5,5 +5,6 @@ data class User(
     val email: String,
     val phoneNumber: String,
     val fieldOfActivity: String,
-    val type: String
+    val type: String,
+
 )

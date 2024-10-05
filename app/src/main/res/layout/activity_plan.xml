@@ -1,38 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#FEFEFE"
-    android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/btnReturnplan"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="@drawable/circular_button"
-        android:src="@drawable/ic_arrow_back"
-        android:contentDescription="@string/btn_return"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="center"
-        app:tint="@android:color/black" />
+    android:id="@+id/context_viewplan"
 
-    <ImageView
-        android:id="@+id/logo1"
-        android:layout_width="138dp"
-        android:layout_height="104dp"
-        android:contentDescription="@string/logo_desc"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139" />
-
+    tools:context=".PlanActivity">
     <TextView
         android:id="@+id/txtFullName"
         android:layout_width="250dp"
@@ -102,131 +78,48 @@
         app:layout_constraintVertical_bias="0.131" />
 
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="407dp"
-        android:layout_height="498dp"
+    <ImageButton
+        android:id="@+id/btnReturplan"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/circular_button"
+        android:contentDescription="@string/btn_return"
+        android:scaleType="center"
+        android:src="@drawable/ic_arrow_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844"
-        app:srcCompat="@drawable/forplan2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.034"
 
-    <TextView
-        android:id="@+id/txtBasic1"
-        android:layout_width="177dp"
-        android:layout_height="65dp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="@string/basic1"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        app:tint="@android:color/black" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="407dp"
-        android:layout_height="498dp"
+        android:id="@+id/logo"
+        android:layout_width="117dp"
+        android:layout_height="90dp"
+        android:contentDescription="@string/logo_desc"
+        android:src="@drawable/logo"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844"
-        app:srcCompat="@drawable/forplan2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.022" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="407dp"
-        android:layout_height="498dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="1166dp"
+        android:layout_height="405dp"
+        android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
+
+        app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844"
-        app:srcCompat="@drawable/forplan2" />
-
-    <TextView
-        android:id="@+id/txtModerato"
-        android:layout_width="177dp"
-        android:layout_height="65dp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="@string/Moderato"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
-
-    <TextView
-        android:id="@+id/txtPremium"
-        android:layout_width="177dp"
-        android:layout_height="65dp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="@string/Premium"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
-
-    <ImageButton
-        android:id="@+id/btn_basic"
-        android:layout_width="206dp"
-        android:layout_height="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798"
-        app:srcCompat="@drawable/choose2"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/btn_moderato"
-        android:layout_width="201dp"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803"
-        app:srcCompat="@drawable/choose2"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/btn_premium"
-        android:layout_width="207dp"
-        android:layout_height="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796"
-        app:srcCompat="@drawable/choose2"
-        tools:ignore="MissingConstraints" />
-
-
+        app:layout_constraintVertical_bias="0.736"
+        tools:listitem="@layout/item_pack" />
 </androidx.constraintlayout.widget.ConstraintLayout>

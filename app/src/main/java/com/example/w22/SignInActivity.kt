@@ -13,11 +13,6 @@ import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.example.w22.PREF_FILE as SIGN_UP_PREF_FILE
-
-
-const val SIGN_UP_PREF_FILE: String = "SIGN_UP_PREF_FILE"
-const val PHONE2 = "PHONE2"
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
@@ -26,7 +21,6 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val sharedPreferences = getSharedPreferences(SIGN_UP_PREF_FILE, MODE_PRIVATE)
         val contextViewsignin = findViewById<View>(R.id.context_viewsignin)
 
         binding.etPhoneNumber2.addTextChangedListener(object : TextWatcher {
@@ -43,7 +37,6 @@ class SignInActivity : AppCompatActivity() {
                     val phoneNumber = binding.etPhoneNumber2.text.toString()
                     val request = SignInRequest(phoneNumber)
                     signIn(request)
-                    startActivity(Intent(this, ActivityPlan::class.java))
                 }
             } else {
                 Snackbar.make(contextViewsignin, getString(R.string.msg_error_inputs), Snackbar.LENGTH_SHORT).show()
@@ -71,7 +64,12 @@ class SignInActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val signInResponse = response.body()
                     Toast.makeText(this@SignInActivity, "Connexion réussie: ${signInResponse?.message}", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@SignInActivity, ActivityPlan::class.java))
+
+                    // Pass the phone number to ActivityPlan
+                    val phoneNumber = binding.etPhoneNumber2.text.toString()
+                    val intent = Intent(this@SignInActivity, PlanActivity::class.java)
+                    intent.putExtra("PHONE_NUMBER", phoneNumber)
+                    startActivity(intent)
                     finish()
                 } else {
                     Log.e("SignInActivity", "Erreur : ${response.errorBody()?.string()}")
