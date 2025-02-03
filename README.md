@@ -2,7 +2,8 @@
 
 
 
-![Logo WinWin](./assets/logo.png)
+![Logo WinWin](https://raw.githubusercontent.com/seifriahi/WinwinClub/WinwinClub-frontend/app/src/main/res/drawable/logo.png)
+
 
 ## Introduction
 
