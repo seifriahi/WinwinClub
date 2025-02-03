@@ -1,8 +1,9 @@
-<h1 align="center"><h1 align="center"><h1 align="center">🔴WinwinClub Application🔴</h1>
+<h1 align="center">🔴WinwinClub Application🔴</h1>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/seifriahi/WinwinClub/WinwinClub-frontend/app/src/main/res/drawable/logo.png" alt="Logo Win Win">
+</p>
 
-
-![Logo WinWin](https://raw.githubusercontent.com/seifriahi/WinwinClub/WinwinClub-frontend/app/src/main/res/drawable/logo.png)
 
 
 ## Introduction
