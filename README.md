@@ -1,14 +1,14 @@
-<h1 align="center">🔴WinwinClub Application🔴</h1>
+<h1 align="center">🔴 WinWin Club Application 🔴</h1>
 
 <p align="center">
-  <img src="app/src/main/res/drawable/logo.png" alt="Logo Win Win">
+  <img src="app/src/main/res/drawable/logo.png" alt="Logo WinWin" width="200"/>
 </p>
 
-
+---
 
 ## Introduction
 
-WinWin est une application mobile innovante conçue pour améliorer l'expérience des membres du WinWin Club. Elle permet de réserver des espaces, choisir des packs, commander des consommations et gérer les paiements via une interface intuitive. Développée avec Node.js, Express, et MongoDB pour le backend, et en Kotlin sur Android Studio pour le frontend, WinWin offre une solution performante et évolutive pour une communauté dynamique.
+**WinWin** est une application mobile innovante conçue pour améliorer l'expérience des membres du WinWin Club. Elle permet de réserver des espaces, choisir des packs, commander des consommations et gérer les paiements via une interface intuitive. Développée avec **Node.js**, **Express**, et **MongoDB** pour le backend, et en **Kotlin** sur **Android Studio** pour le frontend, **WinWin** offre une solution performante et évolutive pour une communauté dynamique.
 
 ---
 
