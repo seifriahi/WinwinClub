@@ -30,4 +30,4 @@ WinWin est une application mobile innovante conçue pour améliorer l'expérienc
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/votre-utilisateur/WinWin.git
+   git clone https://github.com/seifriahi/WinwinClub.git
