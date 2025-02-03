@@ -1,104 +1,39 @@
-<h1 align="center">WinwinClub</h1>
+<h1 align="center"><h1 align="center"><h1 align="center">🔴WinwinClub🔴</h1>
 
-###
+# WinWin Application
 
-<h3 align="center">We are the Moonrakers and we are currently developing our ChatDB solution.</h3>
+![Logo WinWin](./assets/logo.png)
 
-###
+## Introduction
 
-<div align="center">
-  <img height="150" src="https://github.com/PIM4sim5/.github/blob/main/profile/%5Bremoval.ai%5D_ee53c470-56ab-4bc8-b8ee-7e9eaa6561dd-moonraker.png?raw=true"  />
-</div>
+Dans le cadre de mon stage académique, j’ai eu la chance de participer au développement d’une application mobile innovante, nommée **WinWin**. Cette application a été créée pour enrichir l’expérience des utilisateurs au sein du WinWin Club, un espace dynamique destiné aux professionnels et aux passionnés à la recherche d’un environnement stimulant et collaboratif. Ce projet, à la fois technologique et commercial, s’inscrit dans la digitalisation des services offerts par le club, avec une attention particulière portée à l’ergonomie et à la fluidité de l’expérience utilisateur.
 
-###
+L’objectif de l’application WinWin est de simplifier et d’optimiser les interactions des membres avec le club. Elle leur offre une plateforme intuitive pour réserver des espaces, choisir des packs en fonction de leurs besoins, commander des consommations et gérer leurs paiements. Ces fonctionnalités essentielles reposent sur une architecture backend robuste, développée avec **Node.js** et **Express**, et intégrée à une base de données **MongoDB**. Ces choix technologiques garantissent une grande performance, flexibilité et évolutivité pour répondre aux besoins futurs du club.
 
-<h3 align="left">👩‍💻  About Us</h3>
+Au cours de ce stage, mon rôle principal a été de concevoir et d’implémenter à la fois le backend et le frontend de l’application. Pour le backend, j’ai utilisé **Node.js** et **Express**, associés à une base de données **MongoDB**, afin de créer une architecture performante et évolutive capable de gérer efficacement les utilisateurs, les commandes, les paiements et les espaces. Du côté frontend, j’ai utilisé **Android Studio** comme environnement de développement et **Kotlin** comme langage de programmation pour créer une application mobile Android. Ce choix technologique m’a permis de concevoir une interface utilisateur intuitive et fluide, répondant aux besoins des membres du club.
 
-###
+Ce rapport de stage présente les différentes étapes de conception, de développement et de mise en œuvre de cette application, en mettant en lumière les défis techniques rencontrés et les solutions apportées. Il souligne également l’impact significatif de cette expérience dans le renforcement de mes compétences en ingénierie logicielle et en développement d’applications mobiles.
 
-<p align="left">Welcome to Moonraker, where innovation meets accessibility in the world of software development. We are a dynamic team of six students from the Esprit University, driven by a shared passion for technology and a desire to empower developers of all levels.</p>
+---
 
-###
+## Fonctionnalités
 
-<h3 align="left">🚀  Our Mission</h3>
+- **Réservation d'espaces** : Permet aux utilisateurs de réserver des espaces au sein du club.
+- **Choix de packs** : Sélection de packs en fonction des besoins de l'utilisateur.
+- **Commande de consommations** : Commande directe de consommations via l'application.
+- **Gestion des paiements** : Intégration d'un système de paiement sécurisé.
 
-###
+---
 
-<p align="left">At Moonraker, our mission is clear: to democratize database management and simplify the development process for beginners and seasoned developers alike. We understand the challenges that come with database management, especially for those who are just starting their journey in software development. That's why we're dedicated to creating an AI-based solution that eliminates the complexities of database manipulation.</p>
+## Technologies Utilisées
 
-###
+- **Backend** : Node.js, Express, MongoDB
+- **Frontend** : Android Studio, Kotlin
 
-<h3 align="left">💪  What Sets Us Apart</h3>
+---
 
-###
+## Installation
 
-<p align="left">Unlike traditional approaches to database management, our solution is designed to be intuitive and accessible to everyone. Whether you're a beginner developer taking your first steps in coding or an experienced developer seeking a more efficient way to handle databases, Moonraker is here to support you. Our tool provides a user-friendly interface that empowers individuals to manipulate databases without the need for extensive technical knowledge.</p>
-
-###
-
-<h3 align="left">👁  Our Vision</h3>
-
-###
-
-<p align="left">We envision a future where database management is no longer a barrier to innovation. By leveraging artificial intelligence and cutting-edge technology, we aim to revolutionize the way developers interact with databases. Our ultimate goal is to foster a community of empowered developers who can focus on building remarkable applications without the burden of database complexities.</p>
-
-###
-
-<h3 align="left">🛠 Language and tools</h3>
-
-###
-
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="40" alt="flutter logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg" height="40" alt="mongodb logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="40" alt="tensorflow logo"  />
-</div>
-
-
-https://github.com/user-attachments/assets/9a080f8e-1d55-40b4-9d36-fa63ec4fe5f1
-
-
-
-
-
-
-<h3 align="left">Join Us on Our Journey</h3>
-
-###
-
-<p align="left">We envision a future where database management is no longer a barrier to innovation. By leveraging artificial intelligence and cutting-edge technology, we aim to revolutionize the way developers interact with databases. Our ultimate goal is to foster a community of empowered developers who can focus on building remarkable applications without the burden of database complexities.</p>
-
-###
-
-<h3 align="center">📞 Contact Us</h3>
-
-###
-
-<div align="center">
-  <img height="200" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRrMjdvbTl2NnQ4MHRrZGk4dTA4NWYweGVxOXZzNDdnb2FyaXIweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CTX0ivSQbI78A/giphy.gif"  />
-</div>
-
-###
-
-<div align="center">
-  <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
-  <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="youtube logo"  />
-  <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitter logo"  />
-</div>
-
-###
-
-<h3 align="center">Profile Views</h3>
-
-###
-
-<div align="center">
-  <img src="https://profile-counter.glitch.me/PIM4SIM5/count.svg?"  />
-</div>
-
-###
-
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/votre-utilisateur/WinWin.git
