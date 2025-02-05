@@ -28,8 +28,12 @@
 
 ---
 
-## Installation
+## Captures d'Écran
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/seifriahi/WinwinClub.git
+<div align="center">
+  <img src="app/src/main/res/drawable/Capture d’écran 2024-12-19 232525.png" alt="Interface de réservation" width="200"/>
+  <img src="app/src/main/res/drawable/Capture d’écran 2024-12-19 232604.png" alt="Choix des packs" width="200"/>
+  <img src="app/src/main/res/drawable/Capture d’écran 2024-12-19 232857.png" alt="Paiement sécurisé" width="200"/>
+</div>
+
+---
